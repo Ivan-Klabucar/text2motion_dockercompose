@@ -10,13 +10,13 @@ services:
     networks:
       - app-network
     volumes:
-      - /Users/klabs/Downloads/app_vids:/src/app/videos
+      - /videos:/src/app/videos
   text2motion:
     image: klabs99/text2motion:1.0
     networks:
       - app-network
     volumes:
-      - /Users/klabs/Downloads/app_vids:/src/app/videos
+      - /videos:/src/app/videos
 
 networks:
   app-network:
