@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  webapp_text2motion:
+    image: klabs99/webapp_text2motion:1.0
+    ports:
+      - "61337:8000"
+    depends_on:
+      - text2motion
+    networks:
+      - app-network
+    volumes:
+      - /Users/klabs/Downloads/app_vids:/src/app/videos
+  text2motion:
+    image: klabs99/text2motion:1.0
+    networks:
+      - app-network
+    volumes:
+      - /Users/klabs/Downloads/app_vids:/src/app/videos
+
+networks:
+  app-network:
+
+volumes:
+  shared-data:
