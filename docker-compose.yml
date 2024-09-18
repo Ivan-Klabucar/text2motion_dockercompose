@@ -2,7 +2,7 @@ version: '3'
 
 services:
   webapp_text2motion:
-    image: klabs99/webapp_text2motion:1.0
+    image: klabs99/webapp_text2motion:1.1
     ports:
       - "61337:8000"
     depends_on:
@@ -12,7 +12,7 @@ services:
     volumes:
       - ./videos:/src/app/videos
   text2motion:
-    image: klabs99/text2motion:1.0
+    image: klabs99/text2motion:1.1
     networks:
       - app-network
     volumes:
