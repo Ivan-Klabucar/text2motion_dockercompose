@@ -2,7 +2,7 @@ version: '3'
 
 services:
   webapp_text2motion:
-    image: klabs99/webapp_text2motion:1.2
+    image: klabs99/webapp_text2motion:1.3
     ports:
       - "61337:8000"
     depends_on:
